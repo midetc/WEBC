@@ -63,10 +63,10 @@ cd WEBC
 # Запуск бекенду
 cd backend
 pip install -r ../requirements.txt
-python ../run_backend.py
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 # Запуск фронтенду (в іншій консолі)
-cd frontend
+cd ../frontend
 npm install
 npm run dev
 
